@@ -1,0 +1,13 @@
+---
+- name: Install vim and net-tools
+  hosts: all
+  gather_facts: no
+  become: yes
+
+  tasks:
+    - name: install epel-release
+      yum: name=epel-release state=latest  # epel 저장소 최신 버전으로 설치
+    - name: install vim
+      yum: name=vim state=present          # vim 설치
+    - name: install net-tools
+      yum: name=net-tools state=present    # net-tools 설치
