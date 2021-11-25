@@ -1,4 +1,12 @@
-- hosts: all
+---
+  hosts: all
   tasks:
-    - name: install net-tools
-      raw: sudo apt-get -y install net-tools
+    - name: make directory
+      file:
+        path: /home/rahan/touch_files
+        state: directory
+        
+    - name: touch file
+      file:
+        path: /home/rahan/touch_files/jacob.txt
+        state: touch
