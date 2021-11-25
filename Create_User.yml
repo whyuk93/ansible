@@ -1,1 +1,4 @@
-test
+- hosts: all
+  tasks:
+    - name: install net-tools
+      raw: sudo apt-get -y install net-tools
