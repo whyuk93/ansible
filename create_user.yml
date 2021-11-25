@@ -1,4 +1,5 @@
 ---
+- name: test ping
   hosts: all
   tasks:
     - name: make directory
